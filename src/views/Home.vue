@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <template>
+      <div>
+        <v-alert type="success">
+          I'm a success alert.
+        </v-alert>
+
+        <v-alert type="info">
+          I'm an info alert.
+        </v-alert>
+
+        <v-alert type="warning">
+          I'm a warning alert.
+        </v-alert>
+
+        <v-alert type="error">
+          I'm an error alert.
+        </v-alert>
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
+  components: {},
+  data: () => ({
+    active: true
+  })
 };
 </script>
